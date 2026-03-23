@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Life 80+ - Projeto de envelhecimento ativo para uma vida plena após os 80 anos. Oficinas de memória, atividade física e inclusão digital.">
+    <meta name="theme-color" content="#B2C2D1">
+    <title>Life 80+ | A Vida Floresce em Qualquer Idade</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Partículas Flutuantes -->
+    <div class="particles-container" id="particlesContainer" aria-hidden="true"></div>
+
+    <!-- Painel de Acessibilidade -->
+    <div class="accessibility-fab" id="accessibilityFab">
+        <button class="fab-toggle" id="fabToggle" aria-label="Opções de acessibilidade">
+            <i class="bi bi-universal-access"></i>
+        </button>
+        <div class="fab-options" id="fabOptions">
+            <button class="fab-btn" id="increaseFontBtn" aria-label="Aumentar fonte">
+                <i class="bi bi-zoom-in"></i>
+            </button>
+            <button class="fab-btn" id="decreaseFontBtn" aria-label="Diminuir fonte">
+                <i class="bi bi-zoom-out"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5561999999999?text=Olá! Gostaria de saber mais sobre o Life 80+." 
+       class="whatsapp-fab" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Falar via WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+        <span class="whatsapp-label">Fale Conosco</span>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <div class="brand-logo">
+                    <svg viewBox="0 0 50 50" class="ipe-icon">
+                        <circle cx="25" cy="18" r="8" fill="#FFD700"/>
+                        <circle cx="15" cy="22" r="6" fill="#F7C948"/>
+                        <circle cx="35" cy="22" r="6" fill="#F7C948"/>
+                        <circle cx="18" cy="12" r="5" fill="#FFE55C"/>
+                        <circle cx="32" cy="12" r="5" fill="#FFE55C"/>
+                        <rect x="23" y="28" width="4" height="12" rx="2" fill="#8B6914"/>
+                    </svg>
+                </div>
+                <span class="brand-text">Life 80<sup>+</sup></span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#oficinas">Oficinas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#depoimentos">Histórias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-cta" href="#contato">Participar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-bg-shapes"></div>
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                        <span class="hero-badge">Projeto de Extensão</span>
+                        <h1 class="hero-title">A vida floresce<br><span class="highlight">em qualquer idade</span></h1>
+                        <p class="hero-description">
+                            Descubra um novo capítulo da sua história. O Life 80+ oferece oficinas, 
+                            conexões e experiências transformadoras para quem acredita que os melhores 
+                            anos ainda estão por vir.
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat-box" data-aos="zoom-in" data-aos-delay="200">
+                                <span class="stat-value" data-target="200">0</span>
+                                <span class="stat-label">Vidas Impactadas</span>
+                            </div>
+                            <div class="stat-box" data-aos="zoom-in" data-aos-delay="400">
+                                <span class="stat-value" data-target="15">0</span>
+                                <span class="stat-label">Oficinas Mensais</span>
+                            </div>
+                            <div class="stat-box" data-aos="zoom-in" data-aos-delay="600">
+                                <span class="stat-value" data-target="5">0</span>
+                                <span class="stat-label">Anos de Atuação</span>
+                            </div>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="#contato" class="btn btn-golden btn-lg">
+                                <i class=></i>
+                                <span>Quero Participar</span>
+                            </a>
+                            <a href="#sobre" class="btn btn-outline-golden btn-lg hero-secondary-btn">
+                                <i class="bi bi-arrow-right-circle"></i>
+                                <span>Conhecer Mais</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="hero-visual">
+                            <div class="visual-circle circle-1"></div>
+                            <div class="visual-circle circle-2"></div>
+                            <div class="visual-circle circle-3"></div>
+                            <div class="ipe-tree-container">
+                                <svg viewBox="0 0 300 350" class="ipe-tree-large">
+                                    <!-- Tronco -->
+                                    <path d="M145 350 Q150 280 150 220 Q150 180 155 150" stroke="#8B6914" stroke-width="12" fill="none" stroke-linecap="round"/>
+                                    <path d="M150 230 Q120 200 100 170" stroke="#8B6914" stroke-width="6" fill="none" stroke-linecap="round"/>
+                                    <path d="M150 210 Q180 180 200 155" stroke="#8B6914" stroke-width="6" fill="none" stroke-linecap="round"/>
+                                    <path d="M150 190 Q130 170 115 145" stroke="#8B6914" stroke-width="4" fill="none" stroke-linecap="round"/>
+                                    <!-- Pétalas -->
+                                    <circle cx="155" cy="100" r="35" fill="#FFD700" class="petal p1"/>
+                                    <circle cx="100" cy="130" r="28" fill="#F7C948" class="petal p2"/>
+                                    <circle cx="210" cy="125" r="30" fill="#F7C948" class="petal p3"/>
+                                    <circle cx="120" cy="80" r="25" fill="#FFE55C" class="petal p4"/>
+                                    <circle cx="190" cy="75" r="25" fill="#FFE55C" class="petal p5"/>
+                                    <circle cx="155" cy="55" r="22" fill="#FFD700" class="petal p6"/>
+                                    <circle cx="75" cy="105" r="20" fill="#FFF0A0" class="petal p7"/>
+                                    <circle cx="230" cy="100" r="18" fill="#FFF0A0" class="petal p8"/>
+                                    <circle cx="140" cy="35" r="18" fill="#FFE55C" class="petal p9"/>
+                                    <circle cx="175" cy="40" r="15" fill="#FFF0A0" class="petal p10"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-hint">
+                <div class="mouse"></div>
+                <span>Role para explorar</span>
+            </div>
+        </section>
+
+        <!-- Sobre Section -->
+        <section class="section-sobre" id="sobre">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5" data-aos="fade-up">
+                        <div class="sobre-visual">
+                            <div class="visual-frame">
+                                <div class="frame-content">
+                                    <svg viewBox="0 0 200 200" class="sobre-ipe">
+                                        <defs>
+                                            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#FFD700"/>
+                                                <stop offset="100%" style="stop-color:#F7C948"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <circle cx="100" cy="70" r="30" fill="url(#goldGrad)"/>
+                                        <circle cx="65" cy="90" r="22" fill="#FFE55C"/>
+                                        <circle cx="135" cy="90" r="22" fill="#FFE55C"/>
+                                        <circle cx="80" cy="55" r="18" fill="#FFF0A0"/>
+                                        <circle cx="120" cy="55" r="18" fill="#FFF0A0"/>
+                                        <rect x="96" y="110" width="8" height="50" rx="4" fill="#8B6914"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="floating-badge badge-1">
+                                <i class="bi bi-heart-pulse"></i>
+                                <span>Saúde Integral</span>
+                            </div>
+                            <div class="floating-badge badge-2">
+                                <i class="bi bi-people"></i>
+                                <span>Comunidade</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+                        <span class="section-label">Nossas Raízes</span>
+                        <h2 class="section-title">Sobre o Life 80+</h2>
+                        <div class="title-line"></div>
+                        <p class="lead-text">
+                            O <strong>Life 80+</strong> nasceu da crença de que a longevidade é uma oportunidade, 
+                            não uma limitação.
+                        </p>
+                        <p class="body-text">
+                            Somos um projeto de extensão dedicado ao envelhecimento ativo, promovendo qualidade 
+                            de vida através de informação, exercício físico, saúde mental e socialização. Nossa missão 
+                            é combater o idadismo e mostrar que a vida após os 60, 70 ou 80 anos pode ser plena, 
+                            ativa e cheia de novas descobertas.
+                        </p>
+                        <div class="feature-cards">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="bi bi-activity"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Saúde Multidisciplinar</h4>
+                                    <p>Cuidado integrado com corpo e mente</p>
+                                </div>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="bi bi-people-fill"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Conexões Reais</h4>
+                                    <p>Comunidade que acolhe e transforma</p>
+                                </div>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="bi bi-calendar-heart"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Atividades Semanais</h4>
+                                    <p>Programação constante e diversificada</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Para Quem Section -->
+        <section class="section-publico" id="publico">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="section-label">Para Quem</span>
+                    <h2 class="section-title text-white">O Life 80+ é Para Você</h2>
+                    <div class="title-line mx-auto"></div>
+                </div>
+                
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+                        <div class="publico-card">
+                            <div class="publico-icon">
+                                <i class="bi bi-person-heart"></i>
+                            </div>
+                            <h3>Sou Idoso</h3>
+                            <p>
+                                Busco manter minha autonomia, fazer novas amizades e continuar aprendendo. 
+                                Quero participar de atividades que me façam sentir vivo e conectado.
+                            </p>
+                            <a href="#contato" class="btn btn-golden">Quero Participar</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5" data-aos="fade-up" data-aos-delay="200">
+                        <div class="publico-card">
+                            <div class="publico-icon">
+                                <i class="bi bi-hand-thumbs-up-fill"></i>
+                            </div>
+                            <h3>Sou Familiar ou Cuidador</h3>
+                            <p>
+                                Procuro um ambiente seguro e acolhedor para meu familiar. 
+                                Quero que ele tenha qualidade de vida e momentos de alegria.
+                            </p>
+                            <a href="#contato" class="btn btn-outline-golden">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Oficinas Section -->
+        <section class="section-oficinas" id="oficinas">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="section-label">Nossos Ramos</span>
+                    <h2 class="section-title">Oficinas e Atividades</h2>
+                    <div class="title-line mx-auto"></div>
+                    <p class="section-subtitle">Experiências pensadas para estimular corpo, mente e espírito.</p>
+                </div>
+                
+                <div class="oficinas-filter mb-4" data-aos="fade-up">
+                    <button class="filter-btn active" data-filter="all">Todas</button>
+                    <button class="filter-btn" data-filter="mente">Mente</button>
+                    <button class="filter-btn" data-filter="corpo">Corpo</button>
+                    <button class="filter-btn" data-filter="digital">Digital</button>
+                    <button class="filter-btn" data-filter="social">Social</button>
+                </div>
+                
+                <div class="row g-4" id="oficinasGrid">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-category="mente">
+                        <div class="oficina-card">
+                            <div class="oficina-badge">Mente</div>
+                            <div class="oficina-icon">
+                                <i class="bi bi-lightbulb"></i>
+                            </div>
+                            <h3>Oficina de Memória</h3>
+                            <p>Exercícios cognitivos que estimulam memória, atenção e raciocínio através de jogos e dinâmicas lúdicas.</p>
+                            <div class="oficina-meta">
+                                <span><i class="bi bi-calendar3"></i> Quartas, 14h</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" data-category="corpo">
+                        <div class="oficina-card">
+                            <div class="oficina-badge badge-corpo">Corpo</div>
+                            <div class="oficina-icon icon-corpo">
+                                <i class="bi bi-heart-pulse"></i>
+                            </div>
+                            <h3>Corpo em Movimento</h3>
+                            <p>Atividades físicas adaptadas que melhoram mobilidade, equilíbrio e força. Prevenção de quedas.</p>
+                            <div class="oficina-meta">
+                                <span><i class="bi bi-calendar3"></i> Seg e Sex, 9h</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200" data-category="digital">
+                        <div class="oficina-card">
+                            <div class="oficina-badge badge-digital">Digital</div>
+                            <div class="oficina-icon icon-digital">
+                                <i class="bi bi-phone"></i>
+                            </div>
+                            <h3>Inclusão Digital</h3>
+                            <p>Aprenda a usar smartphone, redes sociais e aplicativos essenciais. Conecte-se com o mundo!</p>
+                            <div class="oficina-meta">
+                                <span><i class="bi bi-calendar3"></i> Terças, 15h</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300" data-category="social">
+                        <div class="oficina-card">
+                            <div class="oficina-badge badge-social">Social</div>
+                            <div class="oficina-icon icon-social">
+                                <i class="bi bi-chat-heart"></i>
+                            </div>
+                            <h3>Roda de Histórias</h3>
+                            <p>Compartilhe suas memórias e ouça histórias inspiradoras. Um espaço para conexões genuínas.</p>
+                            <div class="oficina-meta">
+                                <span><i class="bi bi-calendar3"></i> Quintas, 10h</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400" data-category="mente">
+                        <div class="oficina-card">
+                            <div class="oficina-badge">Mente</div>
+                            <div class="oficina-icon">
+                                <i class="bi bi-brush"></i>
+                            </div>
+                            <h3>Arte e Expressão</h3>
+                            <p>Pintura, artesanato e outras formas de expressão criativa para despertar o artista que há em você.</p>
+                            <div class="oficina-meta">
+                                <span><i class="bi bi-calendar3"></i> Sextas, 14h</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500" data-category="corpo">
+                        <div class="oficina-card">
+                            <div class="oficina-badge badge-corpo">Corpo</div>
+                            <div class="oficina-icon icon-corpo">
+                                <i class="bi bi-music-note-beamed"></i>
+                            </div>
+                            <h3>Dança Sênior</h3>
+                            <p>Movimente-se ao som de músicas clássicas e contemporâneas. Alegria e exercício em harmonia.</p>
+                            <div class="oficina-meta">
+                                <span><i class="bi bi-calendar3"></i> Quartas, 10h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos Section -->
+        <section class="section-depoimentos" id="depoimentos">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="section-label">Histórias de Vida</span>
+                    <h2 class="section-title text-white">Vozes que Inspiram</h2>
+                    <div class="title-line mx-auto"></div>
+                </div>
+                
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="depoimento-card">
+                            <div class="depoimento-quote">
+                                <i class="bi bi-quote"></i>
+                            </div>
+                            <p class="depoimento-text">
+                                "O Life 80+ me devolveu a alegria de viver. Fiz amizades verdadeiras 
+                                e descobri que nunca é tarde para aprender coisas novas."
+                            </p>
+                            <div class="depoimento-author">
+                                <div class="author-avatar">
+                                    <span>MH</span>
+                                </div>
+                                <div class="author-info">
+                                    <h4>Maria Helena</h4>
+                                    <span>82 anos, participante há 3 anos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="depoimento-card featured">
+                            <div class="depoimento-quote">
+                                <i class="bi bi-quote"></i>
+                            </div>
+                            <p class="depoimento-text">
+                                "Depois que minha esposa faleceu, me isolei do mundo. O projeto 
+                                me trouxe de volta à vida. Hoje tenho uma rotina que me faz feliz."
+                            </p>
+                            <div class="depoimento-author">
+                                <div class="author-avatar">
+                                    <span>JS</span>
+                                </div>
+                                <div class="author-info">
+                                    <h4>José Santos</h4>
+                                    <span>78 anos, participante há 2 anos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="depoimento-card">
+                            <div class="depoimento-quote">
+                                <i class="bi bi-quote"></i>
+                            </div>
+                            <p class="depoimento-text">
+                                "Minha mãe se transformou! Ela agora manda mensagens pelo WhatsApp, 
+                                faz videochamadas e está sempre animada para as oficinas."
+                            </p>
+                            <div class="depoimento-author">
+                                <div class="author-avatar">
+                                    <span>CA</span>
+                                </div>
+                                <div class="author-info">
+                                    <h4>Carla Almeida</h4>
+                                    <span>Filha de participante</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parceiros Section -->
+        <section class="section-parceiros" id="parceiros">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="section-label">Apoio Institucional</span>
+                    <h2 class="section-title">Nossos Parceiros</h2>
+                    <div class="title-line mx-auto"></div>
+                    <p class="section-subtitle">Instituições que acreditam no envelhecimento ativo e apoiam nossa missão.</p>
+                </div>
+                
+                <div class="parceiros-grid" data-aos="fade-up" data-aos-delay="200">
+                    <div class="parceiro-item">
+                        <div class="parceiro-logo">
+                            <span class="parceiro-icon">UCB</span>
+                        </div>
+                        <h4>UNIVERSIDADE CATÓLICA</h4>
+                        <p>A UCB é a "casa" e parceira acadêmica do projeto</p>
+                    </div>
+                    
+                    <div class="parceiro-item">
+                        <div class="parceiro-logo">
+                            <span class="parceiro-icon">S</span>
+                        </div>
+                        <h4>GRUPO SABIN</h4>
+                        <p>Referência nacional em medicina diagnóstica e humanização</p>
+                    </div>
+                    
+                    <div class="parceiro-item">
+                        <div class="parceiro-logo">
+                            <span class="parceiro-icon">CAPES</span>
+                        </div>
+                        <h4>CAPES</h4>
+                        <p>Coordenação de Aperfeiçoamento de Pessoal de Nível Superior</p>
+                    </div>
+                    
+                    <div class="parceiro-item">
+                        <div class="parceiro-logo">
+                            <span class="parceiro-icon">FAP</span>
+                        </div>
+                        <h4>FAPDF</h4>
+                        <p>Principal indutora de ciência, tecnologia e inovação no Distrito Federal</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section class="section-contato" id="contato">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="contato-card" data-aos="fade-up">
+                            <div class="text-center mb-4">
+                                <span class="section-label">Semeando Conexões</span>
+                                <h2 class="section-title">Faça Parte Dessa Linda História</h2>
+                                <div class="title-line mx-auto"></div>
+                                <p class="section-subtitle">
+                                    Preencha o formulário e entraremos em contato via WhatsApp. 
+                                    Estamos ansiosos para conhecer você!
+                                </p>
+                            </div>
+                            
+                            <form id="whatsappForm" class="contato-form">
+                                <!-- Progress Bar -->
+                                <div class="form-progress">
+                                    <div class="progress-bar" id="progressBar" style="width: 33.33%"></div>
+                                </div>
+                                
+                                <!-- Step 1: Nome -->
+                                <div class="form-step active" data-step="1">
+                                    <div class="step-header">
+                                        <span class="step-number">1</span>
+                                        <div class="step-info">
+                                            <h3>Como podemos te chamar?</h3>
+                                            <p>Seu nome é o primeiro passo para essa conexão.</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-floating mb-4">
+                                        <input type="text" class="form-control form-control-lg" id="nome" 
+                                               placeholder="Seu nome" required>
+                                        <label for="nome">Seu nome completo</label>
+                                    </div>
+                                    <button type="button" class="btn btn-golden btn-lg w-100 btn-next" data-next="2">
+                                        Continuar <i class="bi bi-arrow-right ms-2"></i>
+                                    </button>
+                                </div>
+                                
+                                <!-- Step 2: Interesses -->
+                                <div class="form-step" data-step="2">
+                                    <div class="step-header">
+                                        <span class="step-number">2</span>
+                                        <div class="step-info">
+                                            <h3>O que te interessa?</h3>
+                                            <p>Selecione as atividades que mais chamam sua atenção.</p>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox-grid">
+                                        <label class="checkbox-card">
+                                            <input type="checkbox" name="interesse" value="Oficina de Memória">
+                                            <span class="checkbox-content">
+                                                <i class="bi bi-lightbulb"></i>
+                                                <span>Oficina de Memória</span>
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-card">
+                                            <input type="checkbox" name="interesse" value="Atividade Física">
+                                            <span class="checkbox-content">
+                                                <i class="bi bi-heart-pulse"></i>
+                                                <span>Atividade Física</span>
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-card">
+                                            <input type="checkbox" name="interesse" value="Inclusão Digital">
+                                            <span class="checkbox-content">
+                                                <i class="bi bi-phone"></i>
+                                                <span>Inclusão Digital</span>
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-card">
+                                            <input type="checkbox" name="interesse" value="Roda de Histórias">
+                                            <span class="checkbox-content">
+                                                <i class="bi bi-chat-heart"></i>
+                                                <span>Roda de Histórias</span>
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-card">
+                                            <input type="checkbox" name="interesse" value="Arte e Expressão">
+                                            <span class="checkbox-content">
+                                                <i class="bi bi-brush"></i>
+                                                <span>Arte e Expressão</span>
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-card">
+                                            <input type="checkbox" name="interesse" value="Dança Sênior">
+                                            <span class="checkbox-content">
+                                                <i class="bi bi-music-note-beamed"></i>
+                                                <span>Dança Sênior</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="d-flex gap-3 mt-4">
+                                        <button type="button" class="btn btn-outline-secondary btn-lg btn-prev" data-prev="1">
+                                            <i class="bi bi-arrow-left me-2"></i>Voltar
+                                        </button>
+                                        <button type="button" class="btn btn-golden btn-lg flex-grow-1 btn-next" data-next="3">
+                                            Continuar <i class="bi bi-arrow-right ms-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 3: Tipo -->
+                                <div class="form-step" data-step="3">
+                                    <div class="step-header">
+                                        <span class="step-number">3</span>
+                                        <div class="step-info">
+                                            <h3>Qual seu perfil?</h3>
+                                            <p>Isso nos ajuda a personalizar o atendimento.</p>
+                                        </div>
+                                    </div>
+                                    <div class="radio-grid">
+                                        <label class="radio-card">
+                                            <input type="radio" name="tipo" value="Idoso interessado em participar">
+                                            <span class="radio-content">
+                                                <i class="bi bi-person-heart"></i>
+                                                <span>Sou Idoso</span>
+                                                <small>Quero participar das atividades</small>
+                                            </span>
+                                        </label>
+                                        <label class="radio-card">
+                                            <input type="radio" name="tipo" value="Familiar de um idoso">
+                                            <span class="radio-content">
+                                                <i class="bi bi-people-fill"></i>
+                                                <span>Sou Familiar</span>
+                                                <small>Busco para um ente querido</small>
+                                            </span>
+                                        </label>
+                                        <label class="radio-card">
+                                            <input type="radio" name="tipo" value="Cuidador profissional">
+                                            <span class="radio-content">
+                                                <i class="bi bi-hand-thumbs-up-fill"></i>
+                                                <span>Sou Cuidador</span>
+                                                <small>Trabalho com idosos</small>
+                                            </span>
+                                        </label>
+                                        <label class="radio-card">
+                                            <input type="radio" name="tipo" value="Interessado em apoiar o projeto">
+                                            <span class="radio-content">
+                                                <i class="bi bi-heart-fill"></i>
+                                                <span>Quero Apoiar</span>
+                                                <small>Voluntário ou parceiro</small>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="d-flex gap-3 mt-4">
+                                        <button type="button" class="btn btn-outline-secondary btn-lg btn-prev" data-prev="2">
+                                            <i class="bi bi-arrow-left me-2"></i>Voltar
+                                        </button>
+                                        <button type="button" class="btn btn-whatsapp btn-lg flex-grow-1" id="submitBtn">
+                                            <i class="bi bi-whatsapp me-2"></i>Enviar via WhatsApp
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4 align-items-start">
+                <div class="col-lg-5">
+                    <div class="footer-brand">
+                        <div class="brand-logo">
+                            <svg viewBox="0 0 50 50" class="ipe-icon">
+                                <circle cx="25" cy="18" r="8" fill="#FFD700"/>
+                                <circle cx="15" cy="22" r="6" fill="#F7C948"/>
+                                <circle cx="35" cy="22" r="6" fill="#F7C948"/>
+                                <circle cx="18" cy="12" r="5" fill="#FFE55C"/>
+                                <circle cx="32" cy="12" r="5" fill="#FFE55C"/>
+                                <rect x="23" y="28" width="4" height="12" rx="2" fill="#8B6914"/>
+                            </svg>
+                        </div>
+                        <span class="brand-text">Life 80<sup>+</sup></span>
+                    </div>
+                    <p class="footer-description">
+                        Projeto de extensão para envelhecimento ativo, com foco em saúde, autonomia e convivência.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://wa.me/5561999999999" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <h5>Navegacao</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#oficinas">Oficinas</a></li>
+                        <li><a href="#contato">Participar</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <h5>Contato</h5>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>UCB - Clínica de Fisioterapia, Taguatinga</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope-fill"></i>
+                            <a href="mailto:life80mais@ucb.br">life80mais@ucb.br</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-whatsapp"></i>
+                            <a href="https://wa.me/5561999999999">(61) 99999-9999</a>
+                        </li>
+                    </ul>
+                    <a href="#contato" class="btn btn-golden footer-cta">Falar com a Equipe</a>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Life 80+. Todos os direitos reservados.</p>
+                <p class="footer-credits">Universidade Católica de Brasília | Projeto de Extensão</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
+
